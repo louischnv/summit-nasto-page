@@ -360,18 +360,30 @@ function loadPixel(){
   });
 })();
 
-/* ===== Typeform embed. A la completion, le Typeform redirige vers /dubai/merci/ (configure cote Typeform). ===== */
+/* ===== Typeform embed via SDK. onSubmit se declenche uniquement a la
+   completion totale du formulaire : c'est la qu'on envoie l'evenement Lead.
+   L'ecran de fin du Typeform redirige en plus vers /dubai/merci/. ===== */
 (function(){
   if(!TYPEFORM_ID) return;
   var slot = document.getElementById('formulaire');
   var fallback = document.getElementById('tf-fallback');
-  var div = document.createElement('div');
-  div.setAttribute('data-tf-live', TYPEFORM_ID);
-  div.setAttribute('data-tf-inline-on-mobile', '');
-  slot.insertBefore(div, fallback);
+  var container = document.createElement('div');
+  container.id = 'tf-container';
+  container.style.width = '100%';
+  container.style.height = '600px';
+  slot.insertBefore(container, fallback);
   fallback.style.display = 'none';
   var s = document.createElement('script');
-  s.src = '//embed.typeform.com/next/embed.js';
+  s.src = 'https://embed.typeform.com/next/embed.js';
+  s.onload = function(){
+    if(!window.tf || !window.tf.createWidget) return;
+    window.tf.createWidget(TYPEFORM_ID, {
+      container: container,
+      inlineOnMobile: true,
+      opacity: 100,
+      onSubmit: function(){ if(window.fbq){ fbq('track', 'Lead'); } }
+    });
+  };
   document.body.appendChild(s);
 })();
 </script>
