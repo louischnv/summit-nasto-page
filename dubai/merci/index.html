@@ -29,6 +29,11 @@ var META_PIXEL_ID = '1591286586126927';
   var state = null;
   try { state = localStorage.getItem('mc-summit-consent'); } catch(e) {}
   if(state !== 'granted') return;
+  /* Dedup : si le Lead a deja ete envoye par le callback onSubmit du
+     formulaire embarque (meme onglet), ne pas le renvoyer ici. On ne
+     l'envoie donc que pour le parcours via le lien direct du Typeform. */
+  var alreadyFired = false;
+  try { alreadyFired = sessionStorage.getItem('mc-lead-fired') === '1'; } catch(e) {}
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
   n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
@@ -36,7 +41,7 @@ var META_PIXEL_ID = '1591286586126927';
   document,'script','https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', META_PIXEL_ID);
   fbq('track', 'PageView');
-  fbq('track', 'Lead');
+  if(!alreadyFired){ fbq('track', 'Lead'); }
 })();
 </script>
 </body>

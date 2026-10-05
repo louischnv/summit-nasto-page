@@ -381,7 +381,10 @@ function loadPixel(){
       container: container,
       inlineOnMobile: true,
       opacity: 100,
-      onSubmit: function(){ if(window.fbq){ fbq('track', 'Lead'); } }
+      onSubmit: function(){
+        try { sessionStorage.setItem('mc-lead-fired', '1'); } catch(e) {}
+        if(window.fbq){ fbq('track', 'Lead'); }
+      }
     });
   };
   document.body.appendChild(s);
