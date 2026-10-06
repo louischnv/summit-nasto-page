@@ -36,18 +36,19 @@ section{padding:72px 0}
 .topbar .cta-mini:hover{background:rgba(255,255,255,.1)}
 
 /* ---------- Boutons ---------- */
-.btn{display:inline-block;background:var(--orange);color:#fff;font-weight:500;font-size:15.5px;padding:17px 36px;border-radius:999px;text-decoration:none;letter-spacing:.01em;transition:opacity .2s}
+.btn{display:inline-block;background:var(--orange);color:#fff;font-weight:500;font-size:15.5px;padding:17px 36px;border-radius:999px;text-decoration:none;letter-spacing:.01em;text-align:center;transition:opacity .2s}
 .btn:hover{opacity:.92}
 .btn-ghost{display:inline-block;color:#fff;font-weight:400;font-size:15px;padding:16px 30px;border-radius:999px;border:1px solid rgba(255,255,255,.3);text-decoration:none}
-.btn-white{display:inline-block;background:#fff;color:var(--navy);font-weight:600;font-size:15.5px;padding:17px 36px;border-radius:999px;text-decoration:none;letter-spacing:.01em;transition:opacity .2s}
+.btn-white{display:inline-block;background:#fff;color:var(--navy);font-weight:600;font-size:15.5px;padding:17px 36px;border-radius:999px;text-decoration:none;letter-spacing:.01em;text-align:center;transition:opacity .2s}
 .btn-white:hover{opacity:.9}
 
 /* ---------- Hero ---------- */
-.hero{position:relative;min-height:96svh;display:flex;align-items:flex-end;background:var(--navy);padding:0}
+.hero{position:relative;min-height:94svh;display:flex;background:var(--navy);padding:0}
 .hero-bg{position:absolute;inset:0;overflow:hidden}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 58%}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,27,42,.5) 0%,rgba(12,27,42,.32) 40%,rgba(12,27,42,.92) 100%)}
-.hero-inner{position:relative;z-index:2;width:100%;padding:150px 0 64px;color:#fff}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,27,42,.62) 0%,rgba(12,27,42,.28) 38%,rgba(12,27,42,.5) 70%,rgba(12,27,42,.92) 100%)}
+.hero-inner{position:relative;z-index:2;width:100%;min-height:94svh;display:flex;flex-direction:column;justify-content:space-between;padding:104px 0 48px;color:#fff}
+.hero-bottom{margin-top:40px}
 .hero h1{font-family:'Noe Display',Georgia,serif;font-weight:400;font-size:clamp(36px,6.8vw,66px);line-height:1.06;letter-spacing:-.03em;max-width:740px}
 .hero .lead{color:rgba(255,255,255,.78);max-width:540px}
 .hero .eyebrow{color:rgba(255,255,255,.65)}
@@ -114,7 +115,9 @@ section{padding:72px 0}
 .fit-single ul{list-style:none;margin-top:8px}
 .fit-single li{position:relative;padding-left:30px;margin-top:16px;font-size:16px;color:rgba(12,27,42,.82);font-weight:300;line-height:1.5}
 .fit-single li::before{content:"✕";position:absolute;left:0;top:1px;color:var(--orange);font-weight:600}
-.fit-note{margin-top:34px;font-size:13.5px;color:var(--mute);max-width:620px}
+.fit-flip{margin-top:30px;max-width:720px;font-family:'Noe Display',Georgia,serif;font-size:clamp(19px,2.6vw,24px);line-height:1.35;color:var(--navy)}
+.fit-flip em{color:var(--orange);font-style:normal}
+.fit-note{margin-top:26px;font-size:13.5px;color:var(--mute);max-width:620px}
 
 /* ---------- Candidature ---------- */
 .apply{background:var(--white)}
