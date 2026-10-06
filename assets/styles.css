@@ -39,6 +39,8 @@ section{padding:72px 0}
 .btn{display:inline-block;background:var(--orange);color:#fff;font-weight:500;font-size:15.5px;padding:17px 36px;border-radius:999px;text-decoration:none;letter-spacing:.01em;transition:opacity .2s}
 .btn:hover{opacity:.92}
 .btn-ghost{display:inline-block;color:#fff;font-weight:400;font-size:15px;padding:16px 30px;border-radius:999px;border:1px solid rgba(255,255,255,.3);text-decoration:none}
+.btn-white{display:inline-block;background:#fff;color:var(--navy);font-weight:600;font-size:15.5px;padding:17px 36px;border-radius:999px;text-decoration:none;letter-spacing:.01em;transition:opacity .2s}
+.btn-white:hover{opacity:.9}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;min-height:96svh;display:flex;align-items:flex-end;background:var(--navy);padding:0}
@@ -99,26 +101,19 @@ section{padding:72px 0}
 .carousel-nav button:hover{background:var(--stone)}
 .prog-note{margin-top:28px;font-size:13.5px;color:var(--mute)}
 
-/* ---------- Intervenants ---------- */
-.guests{background:var(--white)}
-.guest-cards{margin-top:48px;display:grid;gap:36px}
-@media(min-width:768px){.guest-cards{grid-template-columns:repeat(3,1fr);gap:48px}}
-.gcard h3{font-family:'Noe Display',Georgia,serif;font-weight:400;font-size:20px}
-.gcard p{margin-top:12px;font-size:14.5px;color:rgba(12,27,42,.7);font-weight:300}
-.mystere{margin-top:64px;background:var(--navy);color:#fff;border-radius:12px;padding:40px 36px;display:grid;gap:22px}
-@media(min-width:900px){.mystere{grid-template-columns:1fr auto;align-items:center;padding:48px 52px}}
-.mystere h3{font-family:'Noe Display',Georgia,serif;font-weight:400;font-size:clamp(21px,3vw,27px)}
-.mystere p{margin-top:10px;color:rgba(255,255,255,.65);font-size:15px;max-width:540px;font-weight:300}
+/* ---------- Intervenants (bande pleine largeur navy) ---------- */
+.guests{background:var(--navy);color:#fff}
+.mystere{display:grid;gap:24px}
+@media(min-width:900px){.mystere{grid-template-columns:1fr auto;align-items:center;gap:48px}}
+.mystere h3{font-family:'Noe Display',Georgia,serif;font-weight:400;font-size:clamp(24px,3.4vw,34px);line-height:1.15;letter-spacing:-.01em}
+.mystere p{margin-top:14px;color:rgba(255,255,255,.72);font-size:15.5px;max-width:620px;font-weight:300}
 
 /* ---------- Pour qui ---------- */
 .fit{background:var(--stone)}
-.fit-grid{margin-top:48px;display:grid;gap:40px}
-@media(min-width:800px){.fit-grid{grid-template-columns:1fr 1fr;gap:64px}}
-.fit-col h3{font-family:'Noe Display',Georgia,serif;font-weight:400;font-size:21px;padding-bottom:14px;border-bottom:1px solid var(--line)}
-.fit-col ul{margin-top:18px;list-style:none}
-.fit-col li{position:relative;padding-left:28px;margin-top:13px;font-size:15px;color:rgba(12,27,42,.78);font-weight:300}
-.fit-col.yes li::before{content:"✓";position:absolute;left:0;top:0;color:var(--navy);font-weight:600}
-.fit-col.no li::before{content:"✕";position:absolute;left:0;top:0;color:var(--mute);font-weight:400}
+.fit-single{margin-top:44px;max-width:720px}
+.fit-single ul{list-style:none;margin-top:8px}
+.fit-single li{position:relative;padding-left:30px;margin-top:16px;font-size:16px;color:rgba(12,27,42,.82);font-weight:300;line-height:1.5}
+.fit-single li::before{content:"✕";position:absolute;left:0;top:1px;color:var(--orange);font-weight:600}
 .fit-note{margin-top:34px;font-size:13.5px;color:var(--mute);max-width:620px}
 
 /* ---------- Candidature ---------- */

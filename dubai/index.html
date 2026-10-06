@@ -16,8 +16,8 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230C1B2A'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' fill='%23FFFFFF' text-anchor='middle'%3EM%26C%3C/text%3E%3C/svg%3E">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/NoeDisplay-Regular.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-latin.woff2" crossorigin>
-<link rel="preload" as="image" href="/assets/img/dubai-hero.jpg">
-<link rel="stylesheet" href="/assets/styles.css?v=3">
+<link rel="preload" as="image" href="/assets/img/hero-night.jpg">
+<link rel="stylesheet" href="/assets/styles.css?v=4">
 <style>
 @font-face{font-family:'Noe Display';src:url('/fonts/NoeDisplay-Regular.woff2') format('woff2'),url('/fonts/NoeDisplay-Regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Noe Display';src:url('/fonts/NoeDisplay-RegularItalic.woff2') format('woff2'),url('/fonts/NoeDisplay-RegularItalic.woff') format('woff');font-weight:400;font-style:italic;font-display:swap}
@@ -38,7 +38,7 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero">
-  <div class="hero-bg"><img src="/assets/img/dubai-hero.jpg" alt="Skyline de Dubaï à l'heure bleue" fetchpriority="high"></div>
+  <div class="hero-bg"><img src="/assets/img/hero-night.jpg" alt="Skyline de Dubaï illuminée de nuit" fetchpriority="high"></div>
   <div class="hero-inner">
     <div class="wrap">
       <div class="eyebrow">25 → 28 novembre 2026 · Dubaï</div>
@@ -76,7 +76,7 @@
         <p>Depuis, on me pose la même question chaque semaine&nbsp;: «&nbsp;Dubaï, c'est mort&nbsp;?&nbsp;» Mes clients installés là-bas ne sont pas rentrés. Et les demandes n'ont jamais été aussi fortes.</p>
         <p>Le vrai sujet n'a jamais été la guerre. C'est&nbsp;: <strong>est-ce que Dubaï est fait pour toi&nbsp;?</strong> Pas pour l'influenceur qui te vend du rêve. Pour toi. C'est ça qu'on vient trancher en 4 jours.</p>
       </div>
-      <div class="story-img"><img src="/assets/img/dubai-sunrise.jpg" alt="Skyline de Dubaï au lever du soleil" loading="lazy"></div>
+      <div class="story-img"><img src="/assets/img/story-sunset.jpg" alt="Skyline de Dubaï en silhouette au coucher du soleil" loading="lazy"></div>
     </div>
     <div class="section-cta"><a class="btn" href="#formulaire">Je candidate</a></div>
   </div>
@@ -127,28 +127,20 @@
           </ul>
         </article>
       </div>
-      <div class="carousel-foot">
-        <span class="swipe-hint">Swipe →</span>
-        <div class="carousel-nav">
-          <button type="button" id="prog-prev" aria-label="Jour précédent">‹</button>
-          <button type="button" id="prog-next" aria-label="Jour suivant">›</button>
-        </div>
-      </div>
     </div>
-    <div class="section-cta"><a class="btn" href="#formulaire">Candidater au Summit</a></div>
   </div>
 </section>
 
-<!-- ============ INTERVENANTS (encoche) ============ -->
+<!-- ============ INTERVENANTS (bande pleine largeur) ============ -->
 <section class="guests" id="guests">
   <div class="wrap">
     <div class="mystere">
       <div>
-        <div class="eyebrow on-dark" style="color:rgba(255,255,255,.55)">Les intervenants</div>
-        <h3 style="margin-top:12px">Des intervenants d'exception, et un guest que tu connais forcément.</h3>
+        <div class="eyebrow" style="color:rgba(255,255,255,.55)">Les intervenants</div>
+        <h3 style="margin-top:14px">Des intervenants d'exception, et un guest que tu connais forcément.</h3>
         <p>Entrepreneurs expatriés, avocats, fiscalistes, investisseurs sur place, et un guest surprise de premier plan. Les noms, on les garde pour la salle.</p>
       </div>
-      <a class="btn" href="#formulaire">Je veux y être</a>
+      <a class="btn-white" href="#formulaire">Je veux être dans la salle</a>
     </div>
   </div>
 </section>
@@ -157,25 +149,15 @@
 <section class="fit" id="pour-qui">
   <div class="wrap">
     <div class="eyebrow">Le filtre</div>
-    <h2 class="title">Ce summit n'est pas pour tout le monde. On assume.</h2>
-    <div class="fit-grid">
-      <div class="fit-col yes">
-        <h3>C'est pour toi si</h3>
-        <ul>
-          <li>Tu es entrepreneur avec une activité délocalisable&nbsp;: e-commerce, SaaS, agence, contenu, freelance premium</li>
-          <li>Tu fais au moins 10&nbsp;000&nbsp;€ de chiffre d'affaires par mois</li>
-          <li>Tu te poses sérieusement la question de Dubaï&nbsp;: t'installer, développer ton business ou investir</li>
-          <li>Tu veux un vrai réseau sur place</li>
-        </ul>
-      </div>
-      <div class="fit-col no">
-        <h3>Passe ton tour si</h3>
-        <ul>
-          <li>Tu fais moins de 10&nbsp;000&nbsp;€ par mois&nbsp;: ce n'est pas encore le moment</li>
-          <li>Tu cherches des vacances au soleil avec un prétexte business</li>
-          <li>Tu veux qu'on te vende du rêve&nbsp;: on va passer 4 jours à le déconstruire</li>
-        </ul>
-      </div>
+    <h2 class="title">Ce summit n'est pas pour toi si&hellip;</h2>
+    <div class="fit-single">
+      <ul>
+        <li>Tu fais moins de 10&nbsp;000&nbsp;€ de chiffre d'affaires par mois&nbsp;: ce n'est pas encore le moment.</li>
+        <li>Ton activité n'est pas délocalisable.</li>
+        <li>Tu cherches des vacances au soleil avec un prétexte business.</li>
+        <li>Tu veux qu'on te vende du rêve&nbsp;: on va passer 4 jours à le déconstruire.</li>
+        <li>Dubaï ne t'intéresse pas vraiment&nbsp;: ni pour t'installer, ni pour ton business, ni pour investir.</li>
+      </ul>
     </div>
     <p class="fit-note">La valeur du summit, c'est aussi les 14 autres personnes dans la salle. Chaque candidature passe par un appel.</p>
   </div>
@@ -287,17 +269,6 @@ var VSL_EMBED_URL = '';          /* URL d'embed de la VSL (YouTube non repertori
   ifr.title = 'Présentation du M&C Summit Dubaï';
   f.appendChild(ifr);
   s.hidden = false;
-})();
-
-/* ===== Carrousel programme ===== */
-(function(){
-  var track = document.getElementById('ptrack');
-  if(!track) return;
-  function step(){ var c = track.querySelector('.pcard'); return c ? c.getBoundingClientRect().width + 18 : 320; }
-  var prev = document.getElementById('prog-prev');
-  var next = document.getElementById('prog-next');
-  if(prev) prev.addEventListener('click', function(){ track.scrollBy({left: -step(), behavior: 'smooth'}); });
-  if(next) next.addEventListener('click', function(){ track.scrollBy({left: step(), behavior: 'smooth'}); });
 })();
 
 /* ===== Pixel Meta, charge uniquement apres consentement.
