@@ -75,18 +75,29 @@ section{padding:72px 0}
 .stat-num{font-family:'Noe Display',Georgia,serif;font-size:clamp(30px,4.5vw,44px);color:#fff}
 .stat-label{margin-top:8px;font-size:12.5px;color:rgba(255,255,255,.55);letter-spacing:.02em}
 
-/* ---------- Programme ---------- */
-.programme{background:var(--stone)}
-.days{margin-top:48px;display:grid;gap:0;border-top:1px solid var(--line)}
-.day{padding:32px 0;border-bottom:1px solid var(--line);display:grid;gap:14px}
-@media(min-width:800px){.day{grid-template-columns:200px 1fr;gap:40px;align-items:start}}
-.day .d-tag{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);padding-top:6px}
-.day h3{font-family:'Noe Display',Georgia,serif;font-weight:400;font-size:21px}
-.day ul{margin-top:12px;list-style:none}
-.day li{position:relative;padding-left:20px;margin-top:8px;font-size:15px;color:rgba(12,27,42,.75);font-weight:300}
-.day li::before{content:"";position:absolute;left:0;top:11px;width:5px;height:1px;background:var(--navy)}
-.day li em{color:var(--mute);font-style:normal;font-size:13.5px}
-.prog-note{margin-top:26px;font-size:13.5px;color:var(--mute)}
+/* ---------- Boutons centres sous sections ---------- */
+.section-cta{margin-top:40px;text-align:center}
+
+/* ---------- Programme (carrousel) ---------- */
+.programme{background:var(--stone);overflow:hidden}
+.carousel{margin-top:44px;position:relative}
+.ptrack{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:4px 0 10px;scrollbar-width:none;scroll-padding-left:0}
+.ptrack::-webkit-scrollbar{display:none}
+.pcard{flex:0 0 85%;scroll-snap-align:start;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:28px}
+@media(min-width:720px){.pcard{flex:0 0 46%}}
+@media(min-width:1040px){.pcard{flex:0 0 31.5%}}
+.pcard .d-tag{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--orange)}
+.pcard h3{margin-top:12px;font-family:'Noe Display',Georgia,serif;font-weight:400;font-size:21px}
+.pcard ul{margin-top:16px;list-style:none}
+.pcard li{position:relative;padding-left:20px;margin-top:11px;font-size:14.5px;color:rgba(12,27,42,.78);font-weight:300;line-height:1.5}
+.pcard li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--orange)}
+.pcard li em{color:var(--mute);font-style:normal}
+.carousel-foot{margin-top:22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.swipe-hint{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.carousel-nav{display:flex;gap:10px}
+.carousel-nav button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--white);color:var(--navy);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s}
+.carousel-nav button:hover{background:var(--stone)}
+.prog-note{margin-top:28px;font-size:13.5px;color:var(--mute)}
 
 /* ---------- Intervenants ---------- */
 .guests{background:var(--white)}
