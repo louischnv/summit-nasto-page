@@ -273,8 +273,11 @@ var VSL_EMBED_URL = '';          /* URL d'embed de la VSL (YouTube non repertori
 })();
 
 /* ===== Pixel Meta, charge uniquement apres consentement.
-   PageView ici (audience de retargeting). Le Lead part a la completion
-   totale du formulaire (callback onSubmit), avec dedup cote page merci. ===== */
+   PageView ici (audience de retargeting). Le Lead n'est PLUS envoye par le
+   navigateur : il part en server-side via l'API Conversions (webhook Typeform
+   -> fonction Netlify), avec la valeur budget et l'event CandidatureQualifiee
+   pour les candidatures >=3000. Cela evite qu'un adblock/Safari rate la
+   conversion et empeche tout double comptage. ===== */
 function loadPixel(){
   if(window.fbq) return;
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -325,8 +328,10 @@ function loadPixel(){
       inlineOnMobile: true,
       opacity: 100,
       onSubmit: function(){
-        try { sessionStorage.setItem('mc-lead-fired', '1'); } catch(e) {}
-        if(window.fbq){ fbq('track', 'Lead'); }
+        /* Le Lead (et CandidatureQualifiee pour les >=3000) est envoye
+           server-side via l'API Conversions, a partir des vraies reponses
+           du formulaire. On ne declenche donc rien ici pour eviter un
+           double comptage. */
       }
     });
   };
